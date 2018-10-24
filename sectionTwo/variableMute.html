@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Variable Mutable</title>
+</head>
+<body>
+	<script type="text/javascript">
+		firstName = "misho";
+		age 	= 22;
+		married = false;
+		job 	= "engineear"
+		//alert(firstName + ' ' + ' is a ' + age + " year old and he is a " + job + " is he married?" + married)
+
+		//var lastName = prompt("Type your name ");
+		//console.log(firstName + ' ' + lastName)
+
+		/**********************************************
+		/********Operator precedence
+
+
+
+
+
+		/***************************************
+		/*********skill test */
+		var marksHeight = 7
+		var johnHeight = 8
+
+		var johnMass = 10
+		var markMass = 9
+
+		var johnBMI = johnMass / (johnHeight*johnHeight)
+		var markBMI = markMass / (marksHeight*marksHeight)
+		var BMI = markBMI > johnBMI
+		console.log("Is marks BMI higher than john? " + BMI)
+
+
+		/********************************************************
+		Boolean login ****************************************/
+
+		var firstName = "Nila";
+		var age = 12
+
+		if(age > 13){
+			console.log(firstName + ' is a girl');
+		}else if(age >= 13 && age <= 20){
+			console.log(firstName + ' is teen');
+		}else if( age < 13){
+			console.log(firstName + ' is baccha meye');
+		}else{
+			console.log(firstName + ' is bury');
+		}
+
+		/************************************************/
+		/********** The ternary operator and switch statement */
+
+
+		firstName = 'Misho';
+		age = 23;
+
+		age > 18 ? console.log(firstName + ' drinks beer.') : console.log(firstName + ' drinks juice.');
+
+		var drink = age > 18 ? 'drink' : 'juice';
+		console.log(drink)
+
+		var job = 'driver';
+
+		switch(job){
+			case 'teacher':
+				console.log(firstName + ' teaches kids how to programming');
+				break;
+			case 'driver':
+				console.log(firstName + ' drives an uber in dhaka');
+				break;
+			case 'designer':
+				console.log(firstName + ' makes buautiful websites');
+				break;
+			default:
+				console.log(firstName + ' does something else');
+
+		}
+
+		/*************************** code test 2 ***** */
+
+		var JohnGameOne = 89;
+		var JohnGametwo = 120;
+		var JohnGameThree = 103;
+
+		var MikeGameOne 	= 116;
+		var MikeGametwo 	= 94;
+		var MikeGameThree 	= 123;
+
+		var JohnAvg = (JohnGameOne+JohnGametwo+JohnGameThree) / 3
+
+		var MikeAvg = (MikeGameOne+MikeGametwo+MikeGameThree) / 3
+
+		console.log('John avarage score: ' + JohnAvg)
+		console.log('Mike avarage score: ' + MikeAvg)
+
+		var result = JohnAvg > MikeAvg ? ('John winner score: ' + JohnAvg) : ('Mike winner score: ' + MikeAvg);
+		console.log(result);
+
+		if(JohnAvg > MikeAvg){
+			console.log("john win: " + JohnAvg);
+		}else if(MikeAvg > JohnAvg){
+			console.log("Mike wins: " + MikeAvg);
+		}else{
+			console.log("it's draw")
+		}
+
+
+	</script>
+</body>
+</html>
