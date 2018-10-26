@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Js object and properties</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var person = {
+			name 	: {
+				first : "Hossen",
+				last  : "Misho"
+			},
+			age		: 23,
+			gender	: "male",
+			interest: ['programming', 'music'],
+			bio		: function() {
+				return(this.name.first + ' ' + this.name.last+ ' is ' + this.age + ' years old. And he like ' + this.interest[0] + ' , '+ this.interest[1]);
+			},
+			grettings: function(){
+				return('Hi ' + this.name.first + ' ' + this.name.last);
+			}
+		};
+		console.log(person.name);
+		console.log(person.age);
+		console.log(person.bio());
+		console.log(person.grettings());
+
+		var newNotification = new Notification('hello');
+		console.log(newNotification);
+	</script>
+</body>
+</html>
