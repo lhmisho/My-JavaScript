@@ -4,6 +4,7 @@
 	<title>Variable Mutable</title>
 </head>
 <body>
+	<p id="demo"></p>
 	<script type="text/javascript">
 		firstName = "misho";
 		age 	= 22;
@@ -108,7 +109,64 @@
 			console.log("it's draw")
 		}
 
+		/******************************************************************/
+		/********* Function ************************/
+		function ageCalculate(year){
+			return 2018 - year;
+		}
 
+		function yearUntilRetairment(year, name){
+			var age = ageCalculate(year);
+			var retairment = 65 - age;
+			console.log(name + " retairs in " + retairment + "years");
+		}
+
+		yearUntilRetairment(1995, "misho")
+
+
+		/****************************************************/
+		/* function statements and expression */
+
+		var whatYouDo = function(job, name){
+			switch(job){
+				case 'teacher':
+					return name + " teaches students";
+				case 'driver' :
+					return name + " drives car in dhaka";
+				default:
+					return "does something else";
+			}
+		}
+
+		console.log(whatYouDo('driver', 'Misho'));
+		console.log(whatYouDo('teacher', 'Misho'));
+		console.log(whatYouDo('lover', 'Misho'));
+		var i = 1; var j = 1;
+		for(i = 1; i <= 5; i++){
+			for(j = i; j <= 5; j++){
+				console.log("*");
+			}
+		}
+
+		// arrary initialize
+
+		var baame  = ["rahim", "korim", "zakir", "shafik", "galib"];
+		baame.forEach(function(i, j, array){
+			console.log(i, j);
+		})
+		baame = baame.push("")
+		var year  = new Array(1995,1995,1996,1998);
+		var fruits = ['Apple', 'Banana'];
+		var newLength = fruits.push('Orange');
+		console.log(fruits)
+		//document.getElementById('demo').innerHTML=newfruits;
+		//console.log(newfruits);
+		year[8] = 'hasin';
+		console.log(name[0])
+
+		
 	</script>
+	
+
 </body>
 </html>
