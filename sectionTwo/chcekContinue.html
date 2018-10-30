@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Check continue</title>
+    </head>
+    <body>
+        <script>
+            var i = 0;
+            var j = 0;
+            checkiandj:
+                while(i < 4){
+                    console.log(i);
+                    i += 1;
+                    checkj:
+                        while(j > 4){
+                            console.log(j);
+                            j -= 1;
+                            if((j%2)==0){
+                                continue checkj;
+                            }
+                            console.log(j + ' is odd.');
+                        }
+                        console.log('i = ' + i);
+                        console.log('j = ' + j);
+                }
+
+                var arr = [3,5,7];
+                arr.foo = 'hello';
+                for(var i in arr){
+                    console.log(i);
+                }
+                function dump_props(obj, obj_name) {
+                    var result = '';
+                    for (var i in obj) {
+                        result += obj_name + '.' + i + ' = ' + obj[i] + '<br>';
+                    }
+                    result += '<hr>';
+                    return result;
+                }
+
+        </script>
+    </body>
+</html>
