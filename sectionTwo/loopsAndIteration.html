@@ -44,7 +44,7 @@
         var i = 0;
         do{
             i +=1;
-            console.log(i)
+            //console.log(i)
         }while(i < 5);
 
         // while loops
@@ -73,7 +73,7 @@
             x += 1;
             z = 1;
             while(true){
-                console.log("inner loop" + z)
+                //console.log("inner loop" + z)
                 z += 1;
                 if(z === 10 && x == 10){
                     break labelCancelLoops;
@@ -81,6 +81,14 @@
                     break;
                 }
             }
+        }
+
+        var misho = ['Lokman', 'Hossen', 1995, 'programmer'];
+        for(var i = 0; i < misho.length; i++){
+            if(typeof misho[i] !== 'string'){
+                continue;
+            }
+            console.log(misho[i]);
         }
 
     </script>

@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Coding challenge Five</title>
+    </head>
+    <body>
+        <h2>Coding challege Five</h2>
+        <p>Remember the tip calculator challenge? Let's create a more advanced version using everything we learned!</p>
+
+        <p>This time, John and his family went to 5 different restaurants. The bills were $124, $48, $268, $180 and $42.
+            John likes to tip 20% of the bill when the bill is less than $50, 15% when the bill is between $50 and $200, and 10% if the bill is more than $200.</p>
+
+        <p>Implement a tip calculator using objects and loops:</p>
+        <ol>
+            <li>Create an object with an array for the bill values</li>
+            <li>Add a method to calculate the tip</li>
+            <li>This method should include a loop to iterate over all the paid bills and do the tip calculations</li>
+            <li>As an output, create 1) a new array containing all tips, and 2) an array containing final paid amounts (bill + tip). HINT: Start with two empty arrays [] as properties and then fill them up in the loop.</li>
+        </ol>
+
+        <p>EXTRA AFTER FINISHING: Mark's family also went on a holiday, going to 4 different restaurants. The bills were $77, $375, $110, and $45.
+            Mark likes to tip 20% of the bill when the bill is less than $100, 10% when the bill is between $100 and $300, and 25% if the bill is more than $300 (different than John).</p>
+
+        <ol>
+            <li>Implement the same functionality as before, this time using Mark's tipping rules</li>
+            <li>Create a function (not a method) to calculate the average of a given array of tips. HINT: Loop over the array, and in each iteration store the current sum in a variable (starting from 0). After you have the sum of the array, divide it by the number of elements in it (that's how you calculate the average)</li>
+            <li>Calculate the average tip for each family</li>
+            <li>Log to the console which family paid the highest tips on average</li>
+        </ol>
+
+        <h2>GOOD LUCK 😀</h2>
+
+        <script>
+
+            var John = {
+                fullName : 'John Smith',
+                bills    : [124, 48, 268, 180, 42],
+                calcTips : function(){
+                    this.tips = [];
+                    this.finalValue = [];
+
+                    for(var i = 0; i < this.bills.length; i++){
+
+                        var parcentage;
+                        var bill = this.bills[i];
+
+                        if(bill < 50){
+                            parcentage = .2;
+                        }
+                        if(bill >= 200 && bill <= 50){
+                            parcentage = .15;
+                        }
+                        else{
+                            parcentage = .1;
+                        }
+                        this.tips[i] = bill * parcentage;
+                        this.finalValue[i] = bill + bill * parcentage;
+                    }
+                     console.log("Bills: " + this.bills);
+                     console.log("Tips: ", this.tips);
+                     console.log("Final Value: " + this.finalValue);
+                 }
+
+            }
+            John.calcTips();
+            console.log(John);
+        </script>
+    </body>
+</html>
